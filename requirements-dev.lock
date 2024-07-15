@@ -9,24 +9,97 @@
 #   generate-hashes: false
 
 -e file:.
+aiohttp==3.9.5
+    # via langchain
+    # via langchain-community
+aiosignal==1.3.1
+    # via aiohttp
+annotated-types==0.7.0
+    # via pydantic
 asttokens==2.4.1
     # via stack-data
+attrs==23.2.0
+    # via aiohttp
+beautifulsoup4==4.12.3
+    # via wikipedia
+cachetools==5.3.3
+    # via google-auth
+certifi==2024.7.4
+    # via requests
 cfgv==3.4.0
     # via pre-commit
+charset-normalizer==3.3.2
+    # via requests
 comm==0.2.2
     # via ipykernel
+dataclasses-json==0.6.7
+    # via langchain-community
 debugpy==1.8.2
     # via ipykernel
 decorator==5.1.1
     # via ipython
 distlib==0.3.8
     # via virtualenv
+docstring-parser==0.16
+    # via google-cloud-aiplatform
 executing==2.0.1
     # via stack-data
 filelock==3.15.4
     # via virtualenv
+frozenlist==1.4.1
+    # via aiohttp
+    # via aiosignal
+google-api-core==2.19.1
+    # via google-cloud-aiplatform
+    # via google-cloud-bigquery
+    # via google-cloud-core
+    # via google-cloud-resource-manager
+    # via google-cloud-storage
+google-auth==2.32.0
+    # via google-api-core
+    # via google-cloud-aiplatform
+    # via google-cloud-bigquery
+    # via google-cloud-core
+    # via google-cloud-resource-manager
+    # via google-cloud-storage
+google-cloud-aiplatform==1.59.0
+    # via langchain-google-vertexai
+google-cloud-bigquery==3.25.0
+    # via google-cloud-aiplatform
+google-cloud-core==2.4.1
+    # via google-cloud-bigquery
+    # via google-cloud-storage
+google-cloud-resource-manager==1.12.4
+    # via google-cloud-aiplatform
+google-cloud-storage==2.17.0
+    # via google-cloud-aiplatform
+    # via langchain-google-vertexai
+google-crc32c==1.5.0
+    # via google-cloud-storage
+    # via google-resumable-media
+google-resumable-media==2.7.1
+    # via google-cloud-bigquery
+    # via google-cloud-storage
+googleapis-common-protos==1.63.2
+    # via google-api-core
+    # via grpc-google-iam-v1
+    # via grpcio-status
+greenlet==3.0.3
+    # via sqlalchemy
+grpc-google-iam-v1==0.13.1
+    # via google-cloud-resource-manager
+grpcio==1.64.1
+    # via google-api-core
+    # via googleapis-common-protos
+    # via grpc-google-iam-v1
+    # via grpcio-status
+grpcio-status==1.62.2
+    # via google-api-core
 identify==2.6.0
     # via pre-commit
+idna==3.7
+    # via requests
+    # via yarl
 iniconfig==2.0.0
     # via pytest
 ipykernel==6.29.5
@@ -34,25 +107,73 @@ ipython==8.26.0
     # via ipykernel
 jedi==0.19.1
     # via ipython
+joblib==1.4.2
+    # via llm-knowledge-graph
+json-repair==0.25.3
+    # via llm-knowledge-graph
+jsonpatch==1.33
+    # via langchain-core
+jsonpointer==3.0.0
+    # via jsonpatch
 jupyter-client==8.6.2
     # via ipykernel
 jupyter-core==5.7.2
     # via ipykernel
     # via jupyter-client
+langchain==0.2.7
+    # via langchain-community
+    # via llm-knowledge-graph
+langchain-community==0.2.7
+    # via langchain-experimental
+    # via llm-knowledge-graph
+langchain-core==0.2.18
+    # via langchain
+    # via langchain-community
+    # via langchain-experimental
+    # via langchain-google-vertexai
+    # via langchain-text-splitters
+langchain-experimental==0.0.62
+    # via llm-knowledge-graph
+langchain-google-vertexai==1.0.6
+    # via llm-knowledge-graph
+langchain-text-splitters==0.2.2
+    # via langchain
+langsmith==0.1.85
+    # via langchain
+    # via langchain-community
+    # via langchain-core
+loguru==0.7.2
+    # via llm-knowledge-graph
+marshmallow==3.21.3
+    # via dataclasses-json
 matplotlib-inline==0.1.7
     # via ipykernel
     # via ipython
+multidict==6.0.5
+    # via aiohttp
+    # via yarl
 mypy==1.10.1
 mypy-extensions==1.0.0
     # via mypy
+    # via typing-inspect
 neo4j==5.22.0
     # via llm-knowledge-graph
 nest-asyncio==1.6.0
     # via ipykernel
 nodeenv==1.9.1
     # via pre-commit
+numpy==1.26.4
+    # via langchain
+    # via langchain-community
+    # via shapely
+orjson==3.10.6
+    # via langsmith
 packaging==24.1
+    # via google-cloud-aiplatform
+    # via google-cloud-bigquery
     # via ipykernel
+    # via langchain-core
+    # via marshmallow
     # via pytest
 parso==0.8.4
     # via jedi
@@ -67,31 +188,89 @@ pre-commit==3.7.1
     # via llm-knowledge-graph
 prompt-toolkit==3.0.47
     # via ipython
+proto-plus==1.24.0
+    # via google-api-core
+    # via google-cloud-aiplatform
+    # via google-cloud-resource-manager
+protobuf==4.25.3
+    # via google-api-core
+    # via google-cloud-aiplatform
+    # via google-cloud-resource-manager
+    # via googleapis-common-protos
+    # via grpc-google-iam-v1
+    # via grpcio-status
+    # via proto-plus
 psutil==6.0.0
     # via ipykernel
 ptyprocess==0.7.0
     # via pexpect
 pure-eval==0.2.2
     # via stack-data
+pyasn1==0.6.0
+    # via pyasn1-modules
+    # via rsa
+pyasn1-modules==0.4.0
+    # via google-auth
+pydantic==2.8.2
+    # via google-cloud-aiplatform
+    # via langchain
+    # via langchain-core
+    # via langsmith
+pydantic-core==2.20.1
+    # via pydantic
 pygments==2.18.0
     # via ipython
 pytest==8.2.2
     # via llm-knowledge-graph
 python-dateutil==2.9.0.post0
+    # via google-cloud-bigquery
     # via jupyter-client
+python-dotenv==1.0.1
+    # via rootutils
 pytz==2024.1
     # via neo4j
 pyyaml==6.0.1
+    # via langchain
+    # via langchain-community
+    # via langchain-core
     # via pre-commit
 pyzmq==26.0.3
     # via ipykernel
     # via jupyter-client
+regex==2024.5.15
+    # via tiktoken
+requests==2.32.3
+    # via google-api-core
+    # via google-cloud-bigquery
+    # via google-cloud-storage
+    # via langchain
+    # via langchain-community
+    # via langsmith
+    # via tiktoken
+    # via wikipedia
+rootutils==1.0.7
+    # via llm-knowledge-graph
+rsa==4.9
+    # via google-auth
 ruff==0.5.2
+shapely==2.0.5
+    # via google-cloud-aiplatform
 six==1.16.0
     # via asttokens
     # via python-dateutil
+soupsieve==2.5
+    # via beautifulsoup4
+sqlalchemy==2.0.31
+    # via langchain
+    # via langchain-community
 stack-data==0.6.3
     # via ipython
+tenacity==8.5.0
+    # via langchain
+    # via langchain-community
+    # via langchain-core
+tiktoken==0.7.0
+    # via llm-knowledge-graph
 tornado==6.4.1
     # via ipykernel
     # via jupyter-client
@@ -105,7 +284,19 @@ traitlets==5.14.3
 typing-extensions==4.12.2
     # via ipython
     # via mypy
+    # via pydantic
+    # via pydantic-core
+    # via sqlalchemy
+    # via typing-inspect
+typing-inspect==0.9.0
+    # via dataclasses-json
+urllib3==2.2.2
+    # via requests
 virtualenv==20.26.3
     # via pre-commit
 wcwidth==0.2.13
     # via prompt-toolkit
+wikipedia==1.4.0
+    # via llm-knowledge-graph
+yarl==1.9.4
+    # via aiohttp
